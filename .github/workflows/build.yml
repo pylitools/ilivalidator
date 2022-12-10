@@ -45,7 +45,7 @@ jobs:
         id: buildNative
         #./gradlew nativeTest
         run: |
-          cd lib
+          cd java-lib
           ./gradlew clean nativeCompile
 
       - uses: actions/upload-artifact@v2
