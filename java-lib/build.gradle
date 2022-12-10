@@ -1,0 +1,65 @@
+plugins {
+    id 'java-library'
+    id 'org.graalvm.buildtools.native' version '0.9.18'
+}
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+compileJava {
+    options.compilerArgs.addAll(['--release', '17'])
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jars.interlis.ch/' }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+
+    api 'ch.interlis:ilivalidator:1.12.1'
+    api 'org.graalvm.nativeimage:svm:22.3.0'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+graalvmNative {
+    binaries {
+        main {
+            imageName = 'libilivalidator'
+            debug = false
+            verbose = true
+            fallback = false
+            sharedLibrary = true
+            richOutput = true
+
+            buildArgs.add('--enable-url-protocols=http,https')
+
+        }
+        /*
+        test {
+            verbose = true
+            fallback = false
+            buildArgs.add('--enable-url-protocols=http,https')
+        }
+        */
+    }
+}
+
+tasks.register('copySharedLibs', Copy) {
+    from ('build/native/nativeCompile') {
+        include '*.h'
+        include '*.lib'
+        include '*.so'
+        include '*.dll'
+        include '*.dylib'
+    }
+    into '../ilivalidator/lib_ext/'
+}
+nativeCompile.finalizedBy(copySharedLibs)
+
+
+
