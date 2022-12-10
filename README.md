@@ -6,7 +6,10 @@ Ilivalidator is compiled to a [native shared library](https://www.graalvm.org/la
 The native shared libs are built with Github Actions and thus are available for macOS, Ubuntu and Windows (all x86_64 based OS).
 
 ## Installation
-tbd
+
+```
+pip install ilivalidator
+```
 
 ## Run
 tbd
