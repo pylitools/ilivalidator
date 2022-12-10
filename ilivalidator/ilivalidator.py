@@ -10,16 +10,7 @@ elif platform.uname()[0] == "Linux":
 else:
     lib_name = "libilivalidator.dylib"
 
-def quicktext():
-    print('Hello, welcome to QuickFoo package.')
-
 class Ilivalidator:                     
-    #global isolatethread
-    #global dll 
-
-    #isolatethread = None 
-    #dll = None
-
     def validate(data_file_name):
         lib_path = files('ilivalidator.lib_ext').joinpath(lib_name)
         # str() seems to be necessary on windows: https://github.com/TimDettmers/bitsandbytes/issues/30
