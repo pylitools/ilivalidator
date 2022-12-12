@@ -10,8 +10,9 @@ elif platform.uname()[0] == "Linux":
 else:
     lib_name = "libilivalidator.dylib"
 
-class Ilivalidator:                     
-    def validate(data_file_name):
+class Ilivalidator:
+    @staticmethod
+    def validate(data_file_name: str) -> bool:
         lib_path = files('ilivalidator.lib_ext').joinpath(lib_name)
         # str() seems to be necessary on windows: https://github.com/TimDettmers/bitsandbytes/issues/30
         dll = CDLL(str(lib_path))
@@ -22,5 +23,3 @@ class Ilivalidator:
 
         result = dll.ilivalidator(isolatethread, c_char_p(bytes(data_file_name, "utf8")))
         return result
-
-Ilivalidator.validate = staticmethod(Ilivalidator.validate)
