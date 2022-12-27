@@ -20,6 +20,8 @@ dependencies {
 
     api 'ch.interlis:ilivalidator:1.12.1'
     api 'org.graalvm.nativeimage:svm:22.3.0'
+    api 'com.fasterxml.jackson.core:jackson-databind:2.14.1'
+    
 }
 
 tasks.named('test') {

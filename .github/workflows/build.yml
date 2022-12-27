@@ -46,7 +46,7 @@ jobs:
         #./gradlew nativeTest
         run: |
           cd java-lib
-          ./gradlew clean nativeCompile
+          ./gradlew clean test nativeCompile
 
       - uses: actions/upload-artifact@v2
         if: ${{ failure() }}
@@ -71,22 +71,22 @@ jobs:
         if: always() && (steps.buildNative.outcome == 'success')
         run: python setup.py bdist_wheel --plat-name=${{matrix.plat-name}}
 
-      - name: Dummy test (todo make proper python tests) on Linux and macOS
+      - name: Test Package on Linux and macOS
         if: ${{ success() && runner.os != 'Windows' }}
         run: |
           python -m venv venv
           source venv/bin/activate
-          pip install -e .
-          python test.py
+          pip install -e .[test]
+          pytest ilivalidator
         shell: bash
 
-      - name: Dummy test (todo make proper python tests) on Windows
+      - name: Test package on Windows
         if: ${{ success() && runner.os == 'Windows' }}
         run: |
           python -m venv venv
           venv\Scripts\Activate.ps1
-          pip install -e .
-          python test.py
+          pip install -e .[test]
+          pytest ilivalidator
 
       - name: 'Upload build artifact'
         #if: always() && (steps.buildNative.outcome == 'success')

@@ -1,4 +1,5 @@
 import platform
+import json
 
 from ctypes import *
 from importlib_resources import files
@@ -12,7 +13,7 @@ else:
 
 class Ilivalidator:
     @staticmethod
-    def validate(data_file_name: str) -> bool:
+    def validate(data_file_names: list, settings: dict=None) -> bool:
         lib_path = files('ilivalidator.lib_ext').joinpath(lib_name)
         # str() seems to be necessary on windows: https://github.com/TimDettmers/bitsandbytes/issues/30
         dll = CDLL(str(lib_path))
@@ -21,5 +22,11 @@ class Ilivalidator:
         dll.graal_create_isolate(None, byref(isolate), byref(isolatethread))
         dll.ilivalidator.restype = bool
 
-        result = dll.ilivalidator(isolatethread, c_char_p(bytes(data_file_name, "utf8")))
+        data_file_names_string = ';'.join(data_file_names)
+
+        if settings is None:
+            settings = {}       
+        settings_string = json.dumps(settings)
+
+        result = dll.ilivalidator(isolatethread, c_char_p(bytes(data_file_names_string, "utf8")), c_char_p(bytes(settings_string, "utf8")))
         return result

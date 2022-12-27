@@ -1,0 +1,1586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Version    | Who   | Modification
+=======================================================================================
+2022-09-01 | KOGIS | File name adapted (without date at the end)
+-->
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3" xmlns:ili2c="http://www.interlis.ch/ili2c" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <HEADERSECTION SENDER="swisstopo, Geodesy and Federal Directorate of Cadastral Surveying" VERSION="2.3">
+    <MODELS>
+      <MODEL NAME="OeREBKRM_V2_0" VERSION="2021-04-14" URI="https://models.geo.admin.ch/V_D/OeREB/"/>
+    </MODELS>
+    <!-- Stand der XML-Datei, Etat du fichier XML, Stato del XML-File -->
+    <COMMENT>"2022-09-01"</COMMENT>
+  </HEADERSECTION>
+  <DATASECTION>
+    <OeREBKRM_V2_0.Dokumente BID="ch.admin.v_d.oerebkrmvs_vorschriften">
+      <!-- gesetzliche Grundlagen gemäss GeoIV Anhang 1 http://www.admin.ch/ch/d/sr/510_620/app1.html und Weisung "ÖREB-Kataster – Rechtsvorschriften und Hinweise auf die rechtlichen Grundlagen" -->
+      <!-- bases légales selon l'annexe 1 de l'OGéo  http://www.admin.ch/ch/f/sr/510_620/app1.html et Instruction «Cadastre RDPPF – Dispositions juridiques et renvois vers les bases légales» -->
+      <!-- base legali segondo l'allegato 1 dell'OGI http://www.admin.ch/ch/i/sr/510_620/app1.html e Istruzione «Catasto RDPP – Prescrizioni legali e indicazioni concernenti le basi legali» -->
+
+      <!-- ID 73 Nutzungsplanung (kantonal/kommunal) SR 700 Art. 14, 26 -->
+      <!-- ID 76 Planungszonen SR 700 Art. 27 -->
+      <!-- ID 73 Plans d’affectation (cantonaux/communaux) RS 700 art. 14, 26 -->
+      <!-- ID 76 Zones réservées RS 700 art. 27 -->
+      <!-- ID 73 Piani di utilizzazione (cantonali/comunali) RS 700 art. 14, 26 -->
+      <!-- ID 76 Zone di pianificazione RS 700 art. 27 -->
+      <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.700">
+        <Typ>GesetzlicheGrundlage</Typ>
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Bundesgesetz über die Raumplanung</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Loi fédérale sur l'aménagement du territoire</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Legge federale sulla pianificazione del territorio</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Lescha federala davart la planisaziun dal territori</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Federal Act on Spatial Planning</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Abkuerzung>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>RPG</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>LAT</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>LPT</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>LPT</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SPA</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Abkuerzung>
+        <OffizielleNr>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>SR 700</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 700</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 700</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 700</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 700</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </OffizielleNr>
+        <TextImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.admin.ch/ch/d/sr/c700.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.admin.ch/ch/f/sr/c700.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.admin.ch/ch/i/sr/c700.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </TextImWeb>
+        <AuszugIndex>10</AuszugIndex>
+        <Rechtsstatus>inKraft</Rechtsstatus>
+        <publiziertAb>1979-06-22</publiziertAb>
+        <ZustaendigeStelle REF="ch.admin.bk"/>
+      </OeREBKRM_V2_0.Dokumente.Dokument>
+      <!-- ID 87 Projektierungszonen Nationalstrassen SR 725.11 Art. 14 -->
+      <!-- ID 88 Baulinien Nationalstrassen SR 725.11 Art. 22-25, 29 SR 725.111 Art. 13, 13a -->
+      <!-- ID 87 Zones réservées des routes nationales RS 725.11 art. 14 -->
+      <!-- ID 88 Alignements des routes nationales RS 725.11 art. 22-25, 29 RS 725.111 art. 13, 13a -->
+      <!-- ID 87 Zone riservate per le strade nazionali RS 725.11 art. 14 -->
+      <!-- ID 88 Allineamenti per le strade nazionali RS 725.11 art. 22-25, 29 RS 725.111 art. 13, 13a -->
+      <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.725.11">
+        <Typ>GesetzlicheGrundlage</Typ>
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Bundesgesetz über die Nationalstrassen</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Loi fédérale sur les routes nationales</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Legge federale sulle strade nazionali</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Lescha federala davart las vias naziunalas</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Federal Act on the National Highways</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Abkuerzung>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>NSG</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>LRN</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>LSN</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>LVN</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>NHwA</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Abkuerzung>
+        <OffizielleNr>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>SR 725.11</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 725.11</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 725.11</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 725.11</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 725.11</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </OffizielleNr>
+        <TextImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.admin.ch/ch/d/sr/c725_11.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.admin.ch/ch/f/sr/c725_11.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.admin.ch/ch/i/sr/c725_11.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </TextImWeb>
+        <AuszugIndex>110</AuszugIndex>
+        <Rechtsstatus>inKraft</Rechtsstatus>
+        <publiziertAb>1960-03-08</publiziertAb>
+        <ZustaendigeStelle REF="ch.admin.bk"/>
+      </OeREBKRM_V2_0.Dokumente.Dokument>
+      <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.725.111">
+        <Typ>GesetzlicheGrundlage</Typ>
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Nationalstrassenverordnung</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Ordonnance sur les routes nationales</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Ordinanza sulle strade nazionali</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Ordinaziun davart las vias naziunalas</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>National Highways Ordinance</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Abkuerzung>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>NSV</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>ORN</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>OSN</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>OVN</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>NHwO</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Abkuerzung>
+        <OffizielleNr>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>SR 725.111</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 725.111</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 725.111</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 725.111</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 725.111</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </OffizielleNr>
+        <TextImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.admin.ch/ch/d/sr/c725_111.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.admin.ch/ch/f/sr/c725_111.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.admin.ch/ch/i/sr/c725_111.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </TextImWeb>
+        <AuszugIndex>120</AuszugIndex>
+        <Rechtsstatus>inKraft</Rechtsstatus>
+        <publiziertAb>2007-11-07</publiziertAb>
+        <ZustaendigeStelle REF="ch.admin.bk"/>
+      </OeREBKRM_V2_0.Dokumente.Dokument>
+      <!-- ID 96 Projektierungszonen Eisenbahnanlagen SR 742.101 Art. 18n-18p -->
+      <!-- ID 97 Baulinien Eisenbahnanlagen SR 742.101 Art. 18q-18t -->
+      <!-- ID 96 Zones réservées des installations ferroviaires RS 742.101 art. 18n-18p -->
+      <!-- ID 97 Alignements des installations ferroviaires RS 742.101 art. 18q-18t -->
+      <!-- ID 96 Zone riservate per gli impianti ferroviari RS 742.101 art. 18n-18p -->
+      <!-- ID 97 Allineamenti per gli impianti ferroviari RS 742.101 art. 18q-18t -->
+      <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.742.101">
+        <Typ>GesetzlicheGrundlage</Typ>
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Eisenbahngesetz</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Loi fédérale sur les chemins de fer</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Legge federale sulle ferrovie</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Lescha federala davart las viafiers</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Railways Act</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Abkuerzung>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>EBG</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>LCdF</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Lferr</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>LVaifier</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>RailA</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Abkuerzung>
+        <OffizielleNr>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>SR 742.101</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 742.101</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 742.101</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 742.101</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 742.101</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </OffizielleNr>
+        <TextImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.admin.ch/ch/d/sr/c742_101.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.admin.ch/ch/f/sr/c742_101.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.admin.ch/ch/i/sr/c742_101.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </TextImWeb>
+        <AuszugIndex>210</AuszugIndex>
+        <Rechtsstatus>inKraft</Rechtsstatus>
+        <publiziertAb>1957-12-20</publiziertAb>
+        <ZustaendigeStelle REF="ch.admin.bk"/>
+      </OeREBKRM_V2_0.Dokumente.Dokument>
+      <!-- ID 103 Projektierungszonen Flughafenanlagen SR 748 Art. 37n–37p -->
+      <!-- ID 104 Baulinien Flughafenanlagen SR 748 Art. 37q–37s -->
+      <!-- ID 108 Sicherheitszonenplan SR 748 Art. 42 SR 748.131.1 Art. 72 -->
+      <!-- ID 103 Zones réservées des installations aéroportuaires RS 748 art. 37n à 37p -->
+      <!-- ID 104 Alignements des installations aéroportuaires RS 748 art. 37q à 37s -->
+      <!-- ID 108 Plan de la zone de sécurité RS 748 Art. 42 SR 748.131.1 art. 72 -->
+      <!-- ID 103 Zone riservate per gli impianti aeroportuali RS 748 art. 37n–37p -->
+      <!-- ID 104 Allineamenti per gli impianti aeroportuali RS 748 art. 37q–37s -->
+      <!-- ID 108 Piano delle zone di sicurezza RS 748 art. 42 RS 748.131.1 art. 72 -->
+      <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.748.0">
+        <Typ>GesetzlicheGrundlage</Typ>
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Bundesgesetz über die Luftfahrt</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Loi fédérale sur l'aviation</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Legge federale sulla navigazione aerea</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Lescha federala davart l'aviatica</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Federal Act on Civil Aviation</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Abkuerzung>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>LFG</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>LA</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>LNA</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>LA</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>CAA</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Abkuerzung>
+        <OffizielleNr>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>SR 748.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 748.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 748.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 748.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>RS 748.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </OffizielleNr>
+        <TextImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.admin.ch/ch/d/sr/c748_0.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.admin.ch/ch/f/sr/c748_0.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.admin.ch/ch/i/sr/c748_0.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </TextImWeb>
+        <AuszugIndex>310</AuszugIndex>
+        <Rechtsstatus>inKraft</Rechtsstatus>
+        <publiziertAb>1948-12-21</publiziertAb>
+        <ZustaendigeStelle REF="ch.admin.bk"/>
+      </OeREBKRM_V2_0.Dokumente.Dokument>
+      <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.748.131.1">
+        <Typ>GesetzlicheGrundlage</Typ>
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Verordnung über die Infrastruktur der Luftfahrt</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Ordonnance sur l'infrastructure aéronautique</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Ordinanza sull'infrastruttura aeronautica</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Ordinaziun davart l'infrastructura da l'aviatica</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Ordinance on Aviation Infrastructure</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Abkuerzung>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>VIL</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>OSIA</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>OSIA</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>OIAv</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>AvIO</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Abkuerzung>
+        <OffizielleNr>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>SR 748.131.1</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 748.131.1</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 748.131.1</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 748.131.1</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 748.131.1</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </OffizielleNr>
+        <TextImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.admin.ch/ch/d/sr/c748_131_1.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.admin.ch/ch/f/sr/c748_131_1.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.admin.ch/ch/i/sr/c748_131_1.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </TextImWeb>
+        <AuszugIndex>320</AuszugIndex>
+        <Rechtsstatus>inKraft</Rechtsstatus>
+        <publiziertAb>1994-11-23</publiziertAb>
+        <ZustaendigeStelle REF="ch.admin.bk"/>
+      </OeREBKRM_V2_0.Dokumente.Dokument>
+      <!-- ID 116 Kataster der belasteten Standorte SR 814.01 Art. 32c, 32dbis SR 814.680 Art 5 -->
+      <!-- ID 117 Kataster der belasteten Standorte im Bereich des Militärs SR 814.01 Art. 32c, 32dbis SR 814.680 Art. 5 -->
+      <!-- ID 118 Kataster der belasteten Standorte im Bereich der zivilen Flugplätze SR 814.01 Art. 32c, 32dbis SR 814.680 Art. 5 -->
+      <!-- ID 119 Kataster der belasteten Standorte im Bereich des öffentlichen Verkehrs SR 814.01 Art. 32c, 32dbis SR 814.680 Art. 5 -->
+      <!-- ID 116 Cadastre des sites pollués RS 814.01 Art. 32c, 32dbis RS 814.680 Art 5 -->
+      <!-- ID 117 Cadastre des sites pollués - domaine militaire RS 814.01 art. 32c, 32dbis RS 814.680 art. 5 -->
+      <!-- ID 118 Cadastre des sites pollués - domaine des aérodromes civils RS 814.01 art. 32c, 32dbis RS 814.680 art. 5 -->
+      <!-- ID 119 Cadastre des sites pollués - domaine des transports publics RS 814.01 art. 32c, 32dbis RS 814.680 art. 5 -->
+      <!-- ID 116 Catasto dei siti inquinati RS 814.01 art. 32c, 32dbis RS 814.680 art 5 -->
+      <!-- ID 117 Catasto dei siti inquinati nel settore militare RS 814.01 art. 32c, 32dbis RS 814.680 art. 5 -->
+      <!-- ID 118 Catasto dei siti inquinati nel settore degli aeroporti civili RS 814.01 art. 32c, 32dbis RS 814.680 art. 5 -->
+      <!-- ID 119 Catasto dei siti inquinati nel settore dei trasporti pubblici RS 814.01 art. 32c, 32dbis RS 814.680 art. 5 -->
+      <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.814.01">
+        <Typ>GesetzlicheGrundlage</Typ>
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Bundesgesetz über den Umweltschutz</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Loi fédérale sur la protection de l'environnement</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Legge federale sulla protezione dell'ambiente</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Lescha davart la protecziun da l'ambient</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Federal Act on the Protection of the Environment</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Abkuerzung>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>USG</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>LPE</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>LPAmb</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>LPAmb</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>EPA</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Abkuerzung>
+        <OffizielleNr>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>SR 814.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 814.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 814.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 814.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 814.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </OffizielleNr>
+        <TextImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.admin.ch/ch/d/sr/c814_01.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.admin.ch/ch/f/sr/c814_01.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.admin.ch/ch/i/sr/c814_01.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </TextImWeb>
+        <AuszugIndex>410</AuszugIndex>
+        <Rechtsstatus>inKraft</Rechtsstatus>
+        <publiziertAb>1983-10-07</publiziertAb>
+        <ZustaendigeStelle REF="ch.admin.bk"/>
+      </OeREBKRM_V2_0.Dokumente.Dokument>
+      <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.814.680">
+        <Typ>GesetzlicheGrundlage</Typ>
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Verordnung über die Sanierung von belasteten Standorten</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Ordonnance sur l'assainissement des sites pollués</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Ordinanza sul risanamento dei siti inquinati</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Ordinaziun davart las deponias veglias</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Ordinance on the Remediation of Contaminated Sites</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Abkuerzung>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>AltlV</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>OSites</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>OSiti</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>OSDV</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>CSO</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Abkuerzung>
+        <OffizielleNr>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>SR 814.680</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 814.680</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 814.680</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 814.680</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>RS 814.680</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </OffizielleNr>
+        <TextImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.admin.ch/ch/d/sr/c814_680.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.admin.ch/ch/f/sr/c814_680.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.admin.ch/ch/i/sr/c814_680.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </TextImWeb>
+        <AuszugIndex>420</AuszugIndex>
+        <Rechtsstatus>inKraft</Rechtsstatus>
+        <publiziertAb>1998-08-26</publiziertAb>
+        <ZustaendigeStelle REF="ch.admin.bk"/>
+      </OeREBKRM_V2_0.Dokumente.Dokument>
+      <!-- ID 131 Grundwasserschutzzonen SR 814.20 Art. 20 SR 814.201 Art. 29-32, Anhang 4 -->
+      <!-- ID 132 Grundwasserschutzareale SR 814.20 Art. 21 SR 814.201 Art. 29-32, Anhang 4 -->
+      <!-- ID 190 Gewässerraum SR 814.20 Art. 36a SR 814.201 Art. 41a und 41b -->
+      <!-- ID 131 Zones de protection des eaux souterraines RS 814.20 art. 20 RS 814.201 art. 29-32, annexe 4 -->
+      <!-- ID 132 Périmètres de protection des eaux souterraines RS 814.20 art. 21 RS 814.201 art. 29-32 annexe 4 -->
+      <!-- ID 190 Espace réservé aux eaux RS 814.20 art. 36a RS 814.201 art. 41a et 41b -->
+      <!-- ID 131 Zone di protezione delle acque sotterranee RS 814.20 art. 20 RS 814.201 art. 29-32, allegato 4 -->
+      <!-- ID 132 Aree di protezione delle acque sotterranee RS 814.20 art. 21 RS 814.201 art. 29-32, allegato 4 -->
+      <!-- ID 190 Spazio riservato alle acque RS 814.20 art. 36a RS 814.201 art. 41a e 41b -->
+      <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.814.20">
+        <Typ>GesetzlicheGrundlage</Typ>
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Bundesgesetz über den Schutz der Gewässer</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Loi fédérale sur la protection des eaux</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Legge federale sulla protezione delle acque</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Lescha federala davart la protecziun da las auas</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Federal Act on the Protection of Waters</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Abkuerzung>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>GSchG</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Leaux</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>LPAc</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>LPAuas</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>WPA</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Abkuerzung>
+        <OffizielleNr>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>SR 814.20</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 814.20</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 814.20</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 814.20</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 814.20</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </OffizielleNr>
+        <TextImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.admin.ch/ch/d/sr/c814_20.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.admin.ch/ch/f/sr/c814_20.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+               <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.admin.ch/ch/i/sr/c814_20.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </TextImWeb>
+        <AuszugIndex>510</AuszugIndex>
+        <Rechtsstatus>inKraft</Rechtsstatus>
+        <publiziertAb>1991-01-24</publiziertAb>
+        <ZustaendigeStelle REF="ch.admin.bk"/>
+      </OeREBKRM_V2_0.Dokumente.Dokument>
+      <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.814.201">
+        <Typ>GesetzlicheGrundlage</Typ>
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Gewässerschutzverordnung</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Ordonnance sur la protection des eaux</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Ordinanza sulla protezione delle acque</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Ordinaziun davart la protecziun da las auas</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Waters Protection Ordinance</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Abkuerzung>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>GSchV</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>OEaux</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>OPAc</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>OPAuas</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>WPO</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Abkuerzung>
+        <OffizielleNr>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>SR 814.201</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 814.201</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 814.201</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 814.201</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 814.201</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </OffizielleNr>
+        <TextImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.admin.ch/ch/d/sr/c814_201.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.admin.ch/ch/f/sr/c814_201.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.admin.ch/ch/i/sr/c814_201.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </TextImWeb>
+        <AuszugIndex>520</AuszugIndex>
+        <Rechtsstatus>inKraft</Rechtsstatus>
+        <publiziertAb>1998-10-28</publiziertAb>
+        <ZustaendigeStelle REF="ch.admin.bk"/>
+      </OeREBKRM_V2_0.Dokumente.Dokument>
+      <!-- ID145 Lärmempfindlichkeitsstufen (in Nutzungszonen) SR 814.41 Art. 43 -->
+      <!-- ID145 Degré de sensibilité au bruit (dans les zones d’affectation) RS 814.41 art. 43 -->
+      <!-- ID145 Gradi di sensibilità al rumore (in zone d’utilizzazione) RS 814.41 art. 43 -->
+      <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.814.41">
+        <Typ>GesetzlicheGrundlage</Typ>
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Lärmschutz-Verordnung</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Ordonnance sur la protection contre le bruit</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Ordinanza contro l'inquinamento fonico</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Ordinaziun davart la protecziun cunter canera</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Noise Abatement Ordinance</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Abkuerzung>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>LSV</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>OPB</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>OIF</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>OPC</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>NAO</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Abkuerzung>
+        <OffizielleNr>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>SR 814.41</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 814.41</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 814.41</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 814.41</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 814.41</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </OffizielleNr>
+        <TextImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.admin.ch/ch/d/sr/c814_41.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.admin.ch/ch/f/sr/c814_41.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.admin.ch/ch/i/sr/c814_41.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </TextImWeb>
+        <AuszugIndex>620</AuszugIndex>
+        <Rechtsstatus>inKraft</Rechtsstatus>
+        <publiziertAb>1986-12-15</publiziertAb>
+        <ZustaendigeStelle REF="ch.admin.bk"/>
+      </OeREBKRM_V2_0.Dokumente.Dokument>
+      <!-- ID 157 Statische Waldgrenzen SR 921.0 Art. 10 Abs. 2, 13 SR 921.01 Art. 12a -->
+      <!-- ID 159 Waldabstandslinien SR 921.0 Art. 17 -->
+      <!-- ID 160 Waldreservate SR 921.0 Art. 20 Abs. 4 SR 921.01 Art. 41 -->
+      <!-- ID 157 Limites forestières statiques RS 921.0 art. 10, al. 2, et 13 RS 921.01, art. 12a -->
+      <!-- ID 159 Distances par rapport à la forêt RS 921.0 art. 17 -->
+      <!-- ID 160 Réserves forestières RS 921.0 art. 20 al. 4 RS 921.01 art. 41 -->
+      <!-- ID 157 Margini statici della foresta RS 921.0 art. 10 cpv. 2, 13 RS 921.01 art. 12a -->
+      <!-- ID 159 Linee di distanza dalla foresta RS 921.0 art. 17 -->
+      <!-- ID 160 Riserve forestali RS 921.0 art. 20 al. 4 RS 921.01 art. 41 -->
+      <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.921.0">
+        <Typ>GesetzlicheGrundlage</Typ>
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Bundesgesetz über den Wald</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Loi fédérale sur les forêts</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Legge federale sulle foreste</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Lescha federala davart il guaud</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Federal Act on Forest</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Abkuerzung>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>WaG</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>LFo</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>LFo</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>LG</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>ForA</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Abkuerzung>
+        <OffizielleNr>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>SR 921.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 921.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 921.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 921.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>RS 921.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </OffizielleNr>
+        <TextImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.admin.ch/ch/d/sr/c921_0.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.admin.ch/ch/f/sr/c921_0.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.admin.ch/ch/i/sr/c921_0.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </TextImWeb>
+        <AuszugIndex>710</AuszugIndex>
+        <Rechtsstatus>inKraft</Rechtsstatus>
+        <publiziertAb>1991-10-04</publiziertAb>
+        <ZustaendigeStelle REF="ch.admin.bk"/>
+      </OeREBKRM_V2_0.Dokumente.Dokument>
+      <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.921.01">
+        <Typ>GesetzlicheGrundlage</Typ>
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Verordnung über den Wald</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Ordonnance sur les forêts</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Ordinanza sulle foreste</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Ordinaziun davart il guaud</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Ordinance on Forest</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Abkuerzung>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>WaV</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>OFo</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>OFo</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>OG</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>ForO</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Abkuerzung>
+        <OffizielleNr>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>SR 921.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 921.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 921.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 921.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 921.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </OffizielleNr>
+        <TextImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.admin.ch/ch/d/sr/c921_01.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.admin.ch/ch/f/sr/c921_01.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.admin.ch/ch/i/sr/c921_01.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </TextImWeb>
+        <AuszugIndex>720</AuszugIndex>
+        <Rechtsstatus>inKraft</Rechtsstatus>
+        <publiziertAb>1992-11-30</publiziertAb>
+        <ZustaendigeStelle REF="ch.admin.bk"/>
+      </OeREBKRM_V2_0.Dokumente.Dokument>
+      <!-- ID 217 Projektierungszonen Leitungen mit einer Nennspannung von 220 kV oder höher SR 734.0 Art. 18 -->
+      <!-- ID 218 Baulinien Starkstromanlagen SR 734.0 Art. 18b -->
+      <!-- ID 217 Zones réservées des lignes d’une tension nominale égale ou supérieure à 220 kV RS 734.0 art. 18 -->
+      <!-- ID 218 Alignements des installations électriques à courant fort RS 734.0 art. 18b -->
+      <!-- ID 217 Zone riservate per linee con una tensione nominale pari o superiore a 220 kV RS 734.0 art. 18 -->
+      <!-- ID 218 Allineamenti per impianti a corrente forte RS 734.0 art. 18b -->
+      <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.734.0">
+        <Typ>GesetzlicheGrundlage</Typ>
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Bundesgesetz betreffend die elektrischen Schwach- und Starkstromanlagen</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Loi fédérale concernant les installations électriques à faible et à fort courant</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Legge federale concernente gli impianti elettrici a corrente forte e a corrente debole</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Lescha federala davart ils implants electrics da current lev e da current ferm</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Federal Act on Weak and Heavy Current Electrical Installations</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Abkuerzung>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>EleG</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>LIE</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>LIE</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>LIE</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>ElecA</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Abkuerzung>
+        <OffizielleNr>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>SR 734.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 734.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 734.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 734.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 734.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </OffizielleNr>
+        <TextImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.admin.ch/ch/d/sr/c734_0.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.admin.ch/ch/f/sr/c734_0.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.admin.ch/ch/i/sr/c734_0.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </TextImWeb>
+        <AuszugIndex>810</AuszugIndex>
+        <Rechtsstatus>inKraft</Rechtsstatus>
+        <publiziertAb>1902-06-24</publiziertAb>
+        <ZustaendigeStelle REF="ch.admin.bk"/>
+      </OeREBKRM_V2_0.Dokumente.Dokument>
+      <OeREBKRM_V2_0.Amt.Amt TID="ch.admin.bk">
+        <Name>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Bundeskanzlei</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Chancellerie fédérale</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Cancelleria federale</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Chanzlia federala</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Federal Chancellery</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Name>
+        <AmtImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.bk.admin.ch</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.bk.admin.ch</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.bk.admin.ch</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>rm</Language>
+                <Text>https://www.bk.admin.ch</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>en</Language>
+                <Text>https://www.bk.admin.ch</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </AmtImWeb>
+        <UID>CHE263297189</UID>
+      </OeREBKRM_V2_0.Amt.Amt>
+    </OeREBKRM_V2_0.Dokumente>
+  </DATASECTION>
+</TRANSFER>
