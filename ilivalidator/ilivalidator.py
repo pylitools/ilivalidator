@@ -12,6 +12,13 @@ else:
     lib_name = "libilivalidator.dylib"
 
 class Ilivalidator:
+    SETTING_ILIDIRS = "org.interlis2.validator.ilidirs"
+    SETTING_MODELNAMES = "org.interlis2.validator.modelNames"
+    SETTING_ALL_OBJECTS_ACCESSIBLE = "org.interlis2.validator.allobjectsaccessible"
+    SETTING_LOGFILE = "org.interlis2.validator.log"
+    SETTING_LOGFILE_TIMESTAMP = "org.interlis2.validator.log.timestamp"
+    SETTING_XTFLOG = "org.interlis2.validator.xtflog"
+
     @staticmethod
     def validate(data_file_names: list, settings: dict=None) -> bool:
         lib_path = files('ilivalidator.lib_ext').joinpath(lib_name)

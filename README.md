@@ -16,9 +16,32 @@ pip install ilivalidator
 ```
 from ilivalidator import Ilivalidator
 
-valid = Ilivalidator.validate('tests/data/254900.itf')
+valid = Ilivalidator.validate(['path/to/foo.xtf'])
 print("The file is valid: {}".format(valid))
 ```
+
+Options are set with a dictionary:
+
+```
+from ilivalidator import Ilivalidator
+
+settings = {Ilivalidator.SETTING_ALL_OBJECTS_ACCESSIBLE: True}
+valid = Ilivalidator.validate(["file1.xtf","file2.xtf"], settings)
+```
+
+Supported options:
+
+| Python package | Ilivalidator |
+| --- | --- |
+| `SETTING_ILIDIRS` | `--modeldir` |
+| `SETTING_MODELNAMES` | `--models` |
+| `SETTING_ALL_OBJECTS_ACCESSIBLE` | `--allObjectsAccessible` |
+| `SETTING_LOGFILE` | `--log` |
+| `SETTING_LOGFILE_TIMESTAMP` | `--logtime` |
+| `SETTING_XTFLOG` | `--xtflog` |
+| `trace` | `--trace` |
+
+You have to use `True/False` for options without arguments, e.g. `SETTING_ALL_OBJECTS_ACCESSIBLE`.
 
 ## Develop
 

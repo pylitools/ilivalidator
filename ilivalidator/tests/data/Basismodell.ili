@@ -1,0 +1,87 @@
+INTERLIS 2.3;
+
+/** Beschreibung MODEL-Element
+*/
+MODEL Basismodell (de)
+AT "https://agi.so.ch"
+VERSION "2022-11-24"  =
+  IMPORTS GeometryCHLV95_V1;
+
+  /** Topic-ilidoc
+  */
+  TOPIC TopicT1 =
+    OID AS INTERLIS.UUIDOID;
+
+    /** Klasse A
+     */
+    CLASS ClassA =
+      /** Telefonnummer
+       */
+      Attr1 : MANDATORY TEXT*16;
+      /** Hallo Welt.
+       */
+      !!@foo=bar
+      Attr2 : MANDATORY 0 .. 5000;
+      /** Fubar
+       */
+      Attr3 : MANDATORY GeometryCHLV95_V1.Coord2;
+      /** Heute heisse ich so.
+      */
+      Attr4 : TEXT*16;
+      /** Enum zum Filtern
+      */
+      Attr5 : MANDATORY (rot,blau);
+      UNIQUE Attr1, Attr2;
+    END ClassA;
+
+    /** Klasse B
+    */
+    CLASS ClassB =
+      Attr1 : MANDATORY TEXT*16;
+    END ClassB;
+  
+  END TopicT1;
+
+  TOPIC TopicT2 =
+    OID AS INTERLIS.UUIDOID;
+
+    /** Klasse C
+    */
+    CLASS ClassC =
+      Attr1 : MANDATORY TEXT*16;
+    END ClassC;
+  
+  END TopicT2;
+
+  TOPIC TopicT3 =
+    OID AS INTERLIS.UUIDOID;
+
+    CLASS ClassD =
+      AttrD1 : MANDATORY TEXT*16;
+    END ClassD;
+
+    CLASS ClassE =
+      AttrE1 : MANDATORY TEXT*16;
+    END ClassE;
+
+    ASSOCIATION D_E_Assoz =
+      rD -<> {1} ClassD;
+      rE -- {0..*} ClassE;
+    END D_E_Assoz;
+
+    CLASS ClassF =
+      AttrF1 : MANDATORY TEXT*16;
+    END ClassF;
+
+    CLASS ClassG =
+      AttrG1 : MANDATORY TEXT*16;
+    END ClassG;
+
+    ASSOCIATION F_G_Assoz =
+      rF -- {0..*} ClassF;
+      rG -- {0..*} ClassG;
+    END F_G_Assoz;
+
+  END TopicT3;
+
+END Basismodell.

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3">
+  <HEADERSECTION SENDER="noop" VERSION="2.3">
+    <MODELS>
+      <MODEL NAME="Units" VERSION="2012-02-20" URI="http://www.interlis.ch/models"/>
+      <MODEL NAME="CoordSys" VERSION="2015-11-24" URI="http://www.interlis.ch/models"/>
+      <MODEL NAME="GeometryCHLV95_V1" VERSION="2017-12-04" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="Basismodell" VERSION="https://agi.so.ch" URI="https://agi.so.ch"/>
+    </MODELS>
+  </HEADERSECTION>
+  <DATASECTION>
+    <Basismodell.TopicT1 BID="b1">
+      <Basismodell.TopicT1.ClassA TID="6d3158bf-fff6-4df6-98a5-088dfcdb514c">
+        <Attr1>0795551234</Attr1>
+        <Attr2>4999</Attr2>
+        <Attr3>
+          <COORD>
+            <C1>2607957.235</C1>
+            <C2>1229439.569</C2>
+          </COORD>
+        </Attr3>
+        <Attr4>fubar</Attr4>
+        <Attr5>rot</Attr5>
+      </Basismodell.TopicT1.ClassA>
+      <Basismodell.TopicT1.ClassA TID="D68418A8-0414-4079-8745-22CF0C10963C">
+        <Attr1>0785236655</Attr1>
+        <Attr2>21</Attr2>
+        <Attr3>
+          <COORD>
+            <C1>2608523.125</C1>
+            <C2>1227856.745</C2>
+          </COORD>
+        </Attr3>
+        <Attr4>fubar</Attr4>
+        <Attr5>blau</Attr5>
+      </Basismodell.TopicT1.ClassA>
+      <Basismodell.TopicT1.ClassB TID="089629A0-FB6F-4189-AAFE-0F7265638DB0">
+        <Attr1>othertext</Attr1>
+      </Basismodell.TopicT1.ClassB>
+    </Basismodell.TopicT1>
+
+    <Basismodell.TopicT2 BID="b2">
+      <Basismodell.TopicT2.ClassC TID="39167DF5-B0FD-4F34-ADDA-58B13D8FC70E">
+        <Attr1>sometext</Attr1>
+      </Basismodell.TopicT2.ClassC>
+    </Basismodell.TopicT2>
+
+    <Basismodell.TopicT3 BID="b3">
+      <Basismodell.TopicT3.ClassD TID="B50FED43-347C-4C21-943B-FBBD9AE68E3A">
+        <AttrD1>foo</AttrD1>
+      </Basismodell.TopicT3.ClassD>
+      <Basismodell.TopicT3.ClassE TID="AC605084-CD4A-4F7C-9312-95A8849B8AB5">
+        <AttrE1>bar</AttrE1>
+        <rD REF="B50FED43-347C-4C21-943B-FBBD9AE68E3A"></rD>
+      </Basismodell.TopicT3.ClassE>
+
+      <Basismodell.TopicT3.ClassF TID="38EF6488-FDE8-479D-9A28-4364757A1625">
+        <AttrF1>foo</AttrF1>
+      </Basismodell.TopicT3.ClassF>
+      <Basismodell.TopicT3.ClassG TID="8ECA474A-2FFD-43B4-9E5D-FC9F5C68D0CF">
+        <AttrG1>bar</AttrG1>
+      </Basismodell.TopicT3.ClassG>
+      <Basismodell.TopicT3.F_G_Assoz>
+        <rF REF="38EF6488-FDE8-479D-9A28-4364757A1625"></rF>
+        <rG REF="8ECA474A-2FFD-43B4-9E5D-FC9F5C68D0CF"></rG>
+      </Basismodell.TopicT3.F_G_Assoz>
+    </Basismodell.TopicT3>
+
+  </DATASECTION>
+</TRANSFER>
