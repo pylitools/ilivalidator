@@ -1,12 +1,14 @@
 name: ilivalidator python package CI
 
 on: 
-  push:
-    paths-ignore:
-      - '**.md'
-  workflow_dispatch:
+  # push:
+  #   paths-ignore:
+  #     - '**.md'
+  # workflow_dispatch:
 
 jobs:
+
+  # TODO linux arm mit self hosted runner
 
   build:
     name: 'Build on ${{ matrix.os }}'
