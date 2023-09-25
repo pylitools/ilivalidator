@@ -61,8 +61,8 @@ The latter two are needed for SDKMan and GraalVM Native Image.
 ### Python setup
 
 ```
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 python3 -m pip install --upgrade setuptools wheel
 ```
 
@@ -71,6 +71,7 @@ python3 -m pip install --upgrade setuptools wheel
 ```
 python3 setup.py sdist bdist_wheel
 python3 setup.py sdist bdist_wheel --plat-name=manylinux2014_aarch64 
+python3 setup.py sdist bdist_wheel --plat-name=manylinux2014_x86_64 
 ```
 
 ### Install locally
@@ -91,19 +92,29 @@ pytest ilivalidator
 You can use Multipass for using Ubuntu as Development environment:
 
 ```
-multipass launch jammy --cpus 4 --disk 20G --mem 8G --name python-ili-build
-multipass mount $HOME/sources python-ili-build:/home/ubuntu/sources
-multipass shell python-ili-build
-multipass stop python-ili-build
+multipass launch jammy --cpus 4 --disk 20G --memory 8G --name pylitools-dev
+multipass mount $HOME/sources pylitools-dev:/home/ubuntu/sources
+multipass shell pylitools-dev
+multipass stop pylitools-dev
 ```
 
 Install Java:
 
 ```
+sudo apt-get update 
+sudo apt-get install gcc zlib1g-dev build-essential zip unzip
+
 curl -s "https://get.sdkman.io" | bash
-source ...
-sdk i java 22.3.r17-grl
+source "/home/ubuntu/.sdkman/bin/sdkman-init.sh"
+sdk i java 21-graalce
 ```
+
+Compile shared lib:
+```
+./gradlew clean test nativeCompile
+```
+`JAVA_HOME` muss gesetzt sein. Notfalls einmal aus- und einloggen, wenn man in der gleichen Session Java installiert hat.
+
 
 ## Todo
 - Tests: Wie kann die shared lib getestet werden? 

@@ -16,8 +16,8 @@ jobs:
       fail-fast: true
       matrix:
         # https://github.com/actions/runner-images
-        #os: [ ubuntu-22.04, macos-12, windows-2022 ]
-        os: [ ubuntu-22.04]
+        os: [ ubuntu-22.04, macos-12, windows-2022 ]
+        #os: [ ubuntu-22.04]
         include:
           - os: 'ubuntu-22.04'
             plat-name: 'manylinux2014_x86_64'
@@ -48,7 +48,6 @@ jobs:
         run: |
           cd java-lib
           ./gradlew clean test nativeCompile
-          ls -la ../ilivalidator/lib_ext/
 
       - uses: actions/upload-artifact@v2
         if: ${{ failure() }}
