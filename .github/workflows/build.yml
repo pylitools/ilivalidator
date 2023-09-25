@@ -48,6 +48,7 @@ jobs:
         run: |
           cd java-lib
           ./gradlew clean test nativeCompile
+          ls -la ../ilivalidator/lib_ext/
 
       - uses: actions/upload-artifact@v2
         if: ${{ failure() }}
