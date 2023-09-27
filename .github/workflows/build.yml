@@ -54,7 +54,7 @@ jobs:
 
       - name: Build Python source package
         if: always() && (steps.buildNative.outcome == 'success')
-        run: python setup.py sdist
+        run: python3 setup.py sdist
 
       - name: Build Python package
         if: always() && (steps.buildNative.outcome == 'success')
