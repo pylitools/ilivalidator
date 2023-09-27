@@ -26,6 +26,11 @@ jobs:
           cache: 'gradle'
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Install build tools
+        run: |
+          apt-get update 
+          apt-get install gcc zlib1g-dev build-essential  
+
       - name: Build native image
         id: buildNative
         #./gradlew nativeTest
@@ -48,9 +53,9 @@ jobs:
       #   if: always() && (steps.buildNative.outcome == 'success')
       #   run: python -m pip install --upgrade setuptools wheel
 
-      # - name: Build Python source package
-      #   if: always() && (steps.buildNative.outcome == 'success') && runner.os == 'Linux'
-      #   run: python setup.py sdist
+      ## - name: Build Python source package
+      ##   if: always() && (steps.buildNative.outcome == 'success') && runner.os == 'Linux'
+      ##   run: python setup.py sdist
 
       # - name: Build Python package
       #   if: always() && (steps.buildNative.outcome == 'success')
