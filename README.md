@@ -115,6 +115,11 @@ Compile shared lib:
 ```
 `JAVA_HOME` muss gesetzt sein. Notfalls einmal aus- und einloggen, wenn man in der gleichen Session Java installiert hat.
 
+### Self hosted runner
+
+- `export RUNNER_ALLOW_RUNASROOT="1"`
+- Runner group erlauben, dass Public Repos Runner starten dürfen. Aber nur, wenn Runner anschliessend gelöscht wird oder Option wieder ausgeschaltet wird.
+
 
 ## Todo
 - Tests: Wie kann die shared lib getestet werden? 
