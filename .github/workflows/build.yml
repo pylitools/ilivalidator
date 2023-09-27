@@ -52,9 +52,9 @@ jobs:
         if: always() && (steps.buildNative.outcome == 'success')
         run: python3 -m pip install --upgrade setuptools wheel pytest
 
-      ## - name: Build Python source package
-      ##   if: always() && (steps.buildNative.outcome == 'success') && runner.os == 'Linux'
-      ##   run: python setup.py sdist
+       - name: Build Python source package
+         if: always() && (steps.buildNative.outcome == 'success')
+         run: python setup.py sdist
 
       - name: Build Python package
         if: always() && (steps.buildNative.outcome == 'success')
