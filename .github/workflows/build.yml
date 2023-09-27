@@ -38,11 +38,11 @@ jobs:
       #     cd java-lib
       #     ./gradlew clean test nativeCompile
 
-      - uses: actions/upload-artifact@v2
-        if: ${{ failure() }}
-        with:
-          name: reports-native
-          path: lib/build/reports/tests/
+      # - uses: actions/upload-artifact@v2
+      #   if: ${{ failure() }}
+      #   with:
+      #     name: reports-native
+      #     path: lib/build/reports/tests/
 
       - uses: actions/setup-python@v4
         # with:
