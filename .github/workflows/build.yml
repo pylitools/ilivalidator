@@ -31,18 +31,18 @@ jobs:
           apt-get update 
           apt-get install -y gcc zlib1g-dev build-essential  
 
-      # - name: Build native image
-      #   id: buildNative
-      #   #./gradlew nativeTest
-      #   run: |
-      #     cd java-lib
-      #     ./gradlew clean test nativeCompile
+      - name: Build native image
+        id: buildNative
+        #./gradlew nativeTest
+        run: |
+          cd java-lib
+          ./gradlew clean test nativeCompile
 
-      # - uses: actions/upload-artifact@v2
-      #   if: ${{ failure() }}
-      #   with:
-      #     name: reports-native
-      #     path: lib/build/reports/tests/
+      - uses: actions/upload-artifact@v2
+        if: ${{ failure() }}
+        with:
+          name: reports-native
+          path: lib/build/reports/tests/
 
       - name: Install Python
         run: |
@@ -50,7 +50,7 @@ jobs:
 
       - name: Install Python requirements
         if: always() && (steps.buildNative.outcome == 'success')
-        run: python -m pip install --upgrade setuptools wheel
+        run: python3 -m pip install --upgrade setuptools wheel pytest
 
       ## - name: Build Python source package
       ##   if: always() && (steps.buildNative.outcome == 'success') && runner.os == 'Linux'
@@ -58,12 +58,12 @@ jobs:
 
       - name: Build Python package
         if: always() && (steps.buildNative.outcome == 'success')
-        run: python setup.py bdist_wheel --plat-name=manylinux2014_aarch64
+        run: python3 setup.py bdist_wheel --plat-name=manylinux2014_aarch64
 
       - name: Test Package
-        if: ${{ success() && runner.os != 'Windows' }}
+        if: ${{ success() }}
         run: |
-          python -m venv venv
+          python3 -m venv venv
           source venv/bin/activate
           pip install -e .[test]
           pytest ilivalidator
