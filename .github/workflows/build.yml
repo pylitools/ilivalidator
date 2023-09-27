@@ -9,31 +9,15 @@ on:
 jobs:
 
   # TODO linux arm mit self hosted runner
-
-  build:
-    name: 'Build on ${{ matrix.os }}'
+  build-arm:
+    name: 'Build on Linux ARM64'
     strategy:
       fail-fast: true
-      matrix:
-        # https://github.com/actions/runner-images
-        os: [ ubuntu-22.04, macos-12, windows-2022 ]
-        #os: [ ubuntu-22.04]
-        include:
-          - os: 'ubuntu-22.04'
-            plat-name: 'manylinux2014_x86_64'
-          - os: 'macos-12'
-            plat-name: 'macosx_12_0_x86_64'
-          - os: 'windows-2022'
-            plat-name: 'win_amd64'
-
-    runs-on: ${{ matrix.os }}
+    
+    runs-on: ARM64
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: 'Add Developer Command Prompt for Microsoft Visual C++ '
-        if: ${{ runner.os == 'Windows' }}
-        uses: ilammy/msvc-dev-cmd@v1
 
       - uses: graalvm/setup-graalvm@v1
         with:
@@ -60,67 +44,148 @@ jobs:
           python-version: '3.8'
           #cache: 'pip' 
         
-      - name: Install Python requirements
-        if: always() && (steps.buildNative.outcome == 'success')
-        run: python -m pip install --upgrade setuptools wheel
+      # - name: Install Python requirements
+      #   if: always() && (steps.buildNative.outcome == 'success')
+      #   run: python -m pip install --upgrade setuptools wheel
 
-      - name: Build Python source package
-        if: always() && (steps.buildNative.outcome == 'success') && runner.os == 'Linux'
-        run: python setup.py sdist
+      # - name: Build Python source package
+      #   if: always() && (steps.buildNative.outcome == 'success') && runner.os == 'Linux'
+      #   run: python setup.py sdist
 
-      - name: Build Python package
-        if: always() && (steps.buildNative.outcome == 'success')
-        run: python setup.py bdist_wheel --plat-name=${{matrix.plat-name}}
+      # - name: Build Python package
+      #   if: always() && (steps.buildNative.outcome == 'success')
+      #   run: python setup.py bdist_wheel --plat-name=${{matrix.plat-name}}
 
-      - name: Test Package on Linux and macOS
-        if: ${{ success() && runner.os != 'Windows' }}
-        run: |
-          python -m venv venv
-          source venv/bin/activate
-          pip install -e .[test]
-          pytest ilivalidator
-        shell: bash
+      # - name: Test Package
+      #   if: ${{ success() && runner.os != 'Windows' }}
+      #   run: |
+      #     python -m venv venv
+      #     source venv/bin/activate
+      #     pip install -e .[test]
+      #     pytest ilivalidator
+      #   shell: bash
 
-      - name: Test package on Windows
-        if: ${{ success() && runner.os == 'Windows' }}
-        run: |
-          python -m venv venv
-          venv\Scripts\Activate.ps1
-          pip install -e .[test]
-          pytest ilivalidator
+      # - name: 'Upload build artifact'
+      #   #if: always() && (steps.buildNative.outcome == 'success')
+      #   if: ${{ success() }}
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: artifacts
+      #     path: |
+      #       dist/
 
-      - name: 'Upload build artifact'
-        #if: always() && (steps.buildNative.outcome == 'success')
-        if: ${{ success() }}
-        uses: actions/upload-artifact@v2
-        with:
-          name: artifacts
-          path: |
-            dist/
 
-  release:
-    needs: [build]
-    runs-on: ubuntu-22.04
-    steps:
+  # build:
+  #   name: 'Build on ${{ matrix.os }}'
+  #   strategy:
+  #     fail-fast: true
+  #     matrix:
+  #       # https://github.com/actions/runner-images
+  #       os: [ ubuntu-22.04, macos-12, windows-2022 ]
+  #       #os: [ ubuntu-22.04]
+  #       include:
+  #         - os: 'ubuntu-22.04'
+  #           plat-name: 'manylinux2014_x86_64'
+  #         - os: 'macos-12'
+  #           plat-name: 'macosx_12_0_x86_64'
+  #         - os: 'windows-2022'
+  #           plat-name: 'win_amd64'
 
-      - name: 'Check out repository'
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ steps.head.outputs.content }}
-          fetch-depth: 0
+  #   runs-on: ${{ matrix.os }}
 
-      - name: 'Download all build artifacts'
-        uses: actions/download-artifact@v2
+  #   steps:
+  #     - uses: actions/checkout@v4
 
-      - name: 'List artifacts'
-        run: |
-          ls -la /home/runner/work/ilivalidator/ilivalidator/artifacts
-          ls -la /home/runner/work/ilivalidator/ilivalidator/
+  #     - name: 'Add Developer Command Prompt for Microsoft Visual C++ '
+  #       if: ${{ runner.os == 'Windows' }}
+  #       uses: ilammy/msvc-dev-cmd@v1
 
-      - name: Publish package to TestPyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          password: ${{ secrets.PYPI_API_TOKEN }}
-          #password: ${{ secrets.PYPI_TEST_API_TOKEN }}
-          #repository_url: https://test.pypi.org/legacy/
-          packages_dir: artifacts/
+  #     - uses: graalvm/setup-graalvm@v1
+  #       with:
+  #         java-version: '21'
+  #         distribution: 'graalvm-community'
+  #         cache: 'gradle'
+  #         github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  #     - name: Build native image
+  #       id: buildNative
+  #       #./gradlew nativeTest
+  #       run: |
+  #         cd java-lib
+  #         ./gradlew clean test nativeCompile
+
+  #     - uses: actions/upload-artifact@v2
+  #       if: ${{ failure() }}
+  #       with:
+  #         name: reports-native
+  #         path: lib/build/reports/tests/
+
+  #     - uses: actions/setup-python@v4
+  #       with:
+  #         python-version: '3.8'
+  #         #cache: 'pip' 
+        
+  #     - name: Install Python requirements
+  #       if: always() && (steps.buildNative.outcome == 'success')
+  #       run: python -m pip install --upgrade setuptools wheel
+
+  #     - name: Build Python source package
+  #       if: always() && (steps.buildNative.outcome == 'success') && runner.os == 'Linux'
+  #       run: python setup.py sdist
+
+  #     - name: Build Python package
+  #       if: always() && (steps.buildNative.outcome == 'success')
+  #       run: python setup.py bdist_wheel --plat-name=${{matrix.plat-name}}
+
+  #     - name: Test Package on Linux and macOS
+  #       if: ${{ success() && runner.os != 'Windows' }}
+  #       run: |
+  #         python -m venv venv
+  #         source venv/bin/activate
+  #         pip install -e .[test]
+  #         pytest ilivalidator
+  #       shell: bash
+
+  #     - name: Test package on Windows
+  #       if: ${{ success() && runner.os == 'Windows' }}
+  #       run: |
+  #         python -m venv venv
+  #         venv\Scripts\Activate.ps1
+  #         pip install -e .[test]
+  #         pytest ilivalidator
+
+  #     - name: 'Upload build artifact'
+  #       #if: always() && (steps.buildNative.outcome == 'success')
+  #       if: ${{ success() }}
+  #       uses: actions/upload-artifact@v2
+  #       with:
+  #         name: artifacts
+  #         path: |
+  #           dist/
+
+  # release:
+  #   needs: [build, build-arm]
+  #   runs-on: ubuntu-22.04
+  #   steps:
+
+  #     - name: 'Check out repository'
+  #       uses: actions/checkout@v2
+  #       with:
+  #         ref: ${{ steps.head.outputs.content }}
+  #         fetch-depth: 0
+
+  #     - name: 'Download all build artifacts'
+  #       uses: actions/download-artifact@v2
+
+  #     - name: 'List artifacts'
+  #       run: |
+  #         ls -la /home/runner/work/ilivalidator/ilivalidator/artifacts
+  #         ls -la /home/runner/work/ilivalidator/ilivalidator/
+
+  #     - name: Publish package to TestPyPI
+  #       uses: pypa/gh-action-pypi-publish@release/v1
+  #       with:
+  #         password: ${{ secrets.PYPI_API_TOKEN }}
+  #         #password: ${{ secrets.PYPI_TEST_API_TOKEN }}
+  #         #repository_url: https://test.pypi.org/legacy/
+  #         packages_dir: artifacts/
