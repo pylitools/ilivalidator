@@ -78,7 +78,6 @@ jobs:
           path: |
             dist/
 
-
   # build:
   #   name: 'Build on ${{ matrix.os }}'
   #   strategy:
@@ -167,29 +166,30 @@ jobs:
   #         path: |
   #           dist/
 
-  # release:
-  #   needs: [build, build-arm]
-  #   runs-on: ubuntu-22.04
-  #   steps:
+  release:
+    #needs: [build, build-arm]
+    needs: [build-arm]
+    runs-on: ubuntu-22.04
+    steps:
 
-  #     - name: 'Check out repository'
-  #       uses: actions/checkout@v2
-  #       with:
-  #         ref: ${{ steps.head.outputs.content }}
-  #         fetch-depth: 0
+      - name: 'Check out repository'
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.head.outputs.content }}
+          fetch-depth: 0
 
-  #     - name: 'Download all build artifacts'
-  #       uses: actions/download-artifact@v2
+      - name: 'Download all build artifacts'
+        uses: actions/download-artifact@v2
 
-  #     - name: 'List artifacts'
-  #       run: |
-  #         ls -la /home/runner/work/ilivalidator/ilivalidator/artifacts
-  #         ls -la /home/runner/work/ilivalidator/ilivalidator/
+      - name: 'List artifacts'
+        run: |
+          ls -la /home/runner/work/ilivalidator/ilivalidator/artifacts
+          ls -la /home/runner/work/ilivalidator/ilivalidator/
 
-  #     - name: Publish package to TestPyPI
-  #       uses: pypa/gh-action-pypi-publish@release/v1
-  #       with:
-  #         password: ${{ secrets.PYPI_API_TOKEN }}
-  #         #password: ${{ secrets.PYPI_TEST_API_TOKEN }}
-  #         #repository_url: https://test.pypi.org/legacy/
-  #         packages_dir: artifacts/
+      - name: Publish package to TestPyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          #password: ${{ secrets.PYPI_API_TOKEN }}
+          password: ${{ secrets.PYPI_TEST_API_TOKEN }}
+          repository_url: https://test.pypi.org/legacy/
+          packages_dir: artifacts/
